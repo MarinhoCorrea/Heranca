@@ -1,14 +1,42 @@
-import java.util.ArrayList; 
+import java.util.ArrayList;
+import java.util.Scanner;
+import Classes.*;
+import Classes.subclasses.*;
+
 
 public class Main {
     public static void main(String[] args) {
-        // Criação de objetos
-        Estagiario estagiario = new Estagiario();
+        // Criação de variáveis
+        Scanner teclado = new Scanner(System.in);
+        int op = 0;
+         // Criação de ArrayLists
+         ArrayList<Estagiario> listaEstagiarios = new ArrayList<>();
+         ArrayList<Desenvolvedor> listaDesenvolvedores = new ArrayList<>();
+         ArrayList<Gerente> listaGerentes = new ArrayList<>();
         
-        Desenvolvedor desenvolvedor = new Desenvolvedor();
-        Gerente gerente = ;
+        // Laço de repetição para o menu interativo
+        do {
+            op = Metodos.menu(teclado);
+            switch (op) {
+                case 1:
+                    Metodos.CadastrarFuncionario(teclado, listaGerentes, listaDesenvolvedores, listaEstagiarios);
 
-        // Exemplo de uso dos métodos
-        
+                    break;
+                case 2:
+                    Metodos.ExibirDadosGerais(teclado, listaGerentes, listaDesenvolvedores, listaEstagiarios);
+                    break;
+                case 3:
+                    Metodos.ExibirDadosEspecificos(teclado, listaGerentes, listaDesenvolvedores, listaEstagiarios);
+                    break;
+                case 4:
+                    System.out.println("Saindo do sistema...");
+                    break;
+                default:
+                    System.out.println("Opção inválida! Tente novamente.");
+                    break;
+            }
+            
+        } while (op != 4);
+        teclado.close();
     }
 }

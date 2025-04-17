@@ -1,3 +1,7 @@
+package Classes.subclasses;
+
+import Classes.Funcionario;
+
 public class Estagiario extends Funcionario {
 
     public Estagiario(String nome, String departamento, int salario) {

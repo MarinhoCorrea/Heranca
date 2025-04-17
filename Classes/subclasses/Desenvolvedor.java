@@ -1,3 +1,7 @@
+package Classes.subclasses;
+
+import Classes.Funcionario;
+
 public class Desenvolvedor extends Funcionario {
     // Construtor
     public Desenvolvedor(String nome, String departamento, int salario) {

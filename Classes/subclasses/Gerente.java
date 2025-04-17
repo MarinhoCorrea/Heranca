@@ -1,3 +1,7 @@
+package Classes.subclasses;
+
+import Classes.Funcionario;
+
 public class Gerente extends Funcionario{
  
     public Gerente(String nome, String departamento, int salario) {
