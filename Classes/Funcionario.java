@@ -1,5 +1,6 @@
 package Classes;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 public class Funcionario{
     public String nome;
     public String departamento;
@@ -38,7 +39,9 @@ public class Funcionario{
     }
     public int baterPonto(){
         LocalDateTime dataHoraAtual = LocalDateTime.now();
-        System.out.println("Ponto batido em: " + dataHoraAtual);
+        DateTimeFormatter Formatacao = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        String dataHoraFormatada = dataHoraAtual.format(Formatacao);
+        System.out.println("Ponto batido em: " + dataHoraFormatada);
         return 0;
     }
 

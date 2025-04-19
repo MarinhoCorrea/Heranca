@@ -29,6 +29,9 @@ public class Main {
                     Metodos.ExibirDadosEspecificos(teclado, listaGerentes, listaDesenvolvedores, listaEstagiarios);
                     break;
                 case 4:
+                    Metodos.BaterPonto(teclado, listaGerentes, listaDesenvolvedores, listaEstagiarios);
+                    break;
+                case 5:
                     System.out.println("Saindo do sistema...");
                     break;
                 default:
@@ -36,7 +39,7 @@ public class Main {
                     break;
             }
             
-        } while (op != 4);
+        } while (op != 5);
         teclado.close();
     }
 }
