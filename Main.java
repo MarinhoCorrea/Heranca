@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-import Classes.*;
-import Classes.subclasses.*;
+import Modules.*;
+import Modules.subclasses.*;
 
 
 public class Main {
@@ -13,6 +13,7 @@ public class Main {
          ArrayList<Estagiario> listaEstagiarios = new ArrayList<>();
          ArrayList<Desenvolvedor> listaDesenvolvedores = new ArrayList<>();
          ArrayList<Gerente> listaGerentes = new ArrayList<>();
+
         
         // Laço de repetição para o menu interativo
         do {

@@ -1,11 +1,11 @@
-package Classes;
+package Modules;
 import java.util.Scanner;
 
-import Classes.subclasses.*;
-
+import Modules.subclasses.*;
 import java.util.ArrayList;
 
 public class Metodos {
+    
     // Função Menu
     public static int menu(Scanner teclado) {
         System.out.println("Escolha uma opção:");
@@ -34,17 +34,19 @@ public class Metodos {
         String departamento = teclado.next();
         System.out.println("Digite o salário do funcionário: ");
         int salario = teclado.nextInt();
+        System.out.println("Digite o CPF do funcionário: ");
+        long cpf = teclado.nextLong();
         // Verifica o cargo e cria o funcionário correspondente
         if (cargo.equalsIgnoreCase("Gerente")) {
-            Gerente gerente = new Gerente(nome, departamento, salario);
+            Gerente gerente = new Gerente(cpf, nome, departamento, salario);
             listaGerentes.add(gerente);
             System.out.println("Funcionário Gerente cadastrado com sucesso!");
         } else if (cargo.equalsIgnoreCase("Desenvolvedor")) {
-            Desenvolvedor desenvolvedor = new Desenvolvedor(nome, departamento, salario);
+            Desenvolvedor desenvolvedor = new Desenvolvedor(cpf, nome, departamento, salario);
             listaDesenvolvedores.add(desenvolvedor);
             System.out.println("Funcionário Desenvolvedor cadastrado com sucesso!");
         } else if (cargo.equalsIgnoreCase("Estagiario")) {
-            Estagiario estagiario = new Estagiario(nome, departamento, salario);
+            Estagiario estagiario = new Estagiario(cpf, nome, departamento, salario);
             listaEstagiarios.add(estagiario);
             System.out.println("Funcionário Estagiário cadastrado com sucesso!");
         } else {

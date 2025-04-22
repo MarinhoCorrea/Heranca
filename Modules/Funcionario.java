@@ -1,25 +1,17 @@
-package Classes;
+package Modules;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-public class Funcionario{
+public class Funcionario extends Pessoa{
     public String nome;
     public String departamento;
     public int salario;
 
     //Construtor
-    public Funcionario(String nome, String departamento, int salario) {
+    public Funcionario(long cpf, String nome, String departamento, int salario) {
+        super(cpf); // Chama o construtor da classe Pessoa
         this.nome = nome;
         this.departamento = departamento;
-        this.salario = salario;
-    }
-    //Setters
-    public void SetNome(String nome) {
-        this.nome = nome;
-    }
-    public void SetDepartamento(String departamento) {
-        this.departamento = departamento;
-    }
-    public void SetSalario(int salario) {
         this.salario = salario;
     }
     //Getters
@@ -35,7 +27,7 @@ public class Funcionario{
     
     //Métodos de Manipulação dos Dados
     public void mostrarDados() {
-        System.out.println("Nome: " + nome + "\nDepartamento: " + departamento + "\nSalario: " + salario);
+        System.out.println("Nome: " + nome + "\nDepartamento: " + departamento + "\nSalario: " + salario + "\nCPF: " + cpf);
     }
     public int baterPonto(){
         LocalDateTime dataHoraAtual = LocalDateTime.now();
