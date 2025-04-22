@@ -1,4 +1,4 @@
-# Calculadora IMC
+# Sistema Funcionário utilizando Herança em Java
 Tabela de conteúdos
 =================
 <!--ts-->
