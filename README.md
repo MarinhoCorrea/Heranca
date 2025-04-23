@@ -52,4 +52,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 # Link 
 <h3>Link para acessar o video de explicação do projeto</h3>
-<p>https://youtu.be/OJik6MwajEE</p>
+<p>https://youtu.be/NCsCuQamvkY</p>
